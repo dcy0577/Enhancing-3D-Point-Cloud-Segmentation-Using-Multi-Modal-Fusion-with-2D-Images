@@ -1,0 +1,6 @@
+# ignore all
+
+*
+!.gitignore
+!.download-scannet.py
+!.sceneWithDoorWindow.txt
