@@ -2,5 +2,5 @@
 
 *
 !.gitignore
-!.download-scannet.py
-!.sceneWithDoorWindow.txt
+!download-scannet.py
+!sceneWithDoorWindow.txt
