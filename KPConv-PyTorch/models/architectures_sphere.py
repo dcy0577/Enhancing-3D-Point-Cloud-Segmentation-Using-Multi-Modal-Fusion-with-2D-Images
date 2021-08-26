@@ -165,16 +165,16 @@ class KPFCNN_featureAggre(nn.Module):
                 out_dim = out_dim // 2
 
 
-        # second fusion before segementation head, in_dim = 128(original output of KPconv) + 2(geometric features) = 130
+        # second fusion before segementation head, in_dim = 128(original output of KPconv) + 1(geometric features) = 129
 
-        self.head_mlp = UnaryBlock(out_dim + 1, out_dim + 1, False, 0)  # 128+1=129, in_dim=out_dim
-        self.head_softmax = UnaryBlock(out_dim + 1, self.C, False, 0)
+        # self.head_mlp = UnaryBlock(out_dim + 1, out_dim + 1, False, 0)  # 128+1=129, in_dim=out_dim
+        # self.head_softmax = UnaryBlock(out_dim + 1, self.C, False, 0)
 
         # self.head_mlp = UnaryBlock(out_dim + 64, out_dim + 64, False, 0)  # 128+64=192, in_dim=out_dim
         # self.head_softmax = UnaryBlock(out_dim + 64, self.C, False, 0)
 
-        # self.head_mlp = UnaryBlock(out_dim, config.first_features_dim, False, 0)
-        # self.head_softmax = UnaryBlock(config.first_features_dim, self.C, False, 0)
+        self.head_mlp = UnaryBlock(out_dim, config.first_features_dim, False, 0)
+        self.head_softmax = UnaryBlock(config.first_features_dim, self.C, False, 0)
 
 
         ################
@@ -307,7 +307,7 @@ class KPFCNN_featureAggre(nn.Module):
 
         # Head of network
         # second fusion, fusing twice!->not good idea
-        x = torch.cat((x, batch.feature_3d[:,1:]), dim=1)  # (np, 128+1=129)
+        # x = torch.cat((x, batch.feature_3d[:,1:]), dim=1)  # (np, 128+1=129)
         # x = torch.cat((x, feature_2d3d), dim=1)  # (np, 128+64=192)
         x = self.head_mlp(x, batch)
         x = self.head_softmax(x, batch)
