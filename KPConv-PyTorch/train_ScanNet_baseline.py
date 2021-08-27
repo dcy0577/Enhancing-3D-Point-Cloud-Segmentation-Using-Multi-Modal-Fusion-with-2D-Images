@@ -180,9 +180,9 @@ class ScanNetConfig(Config):
     # Choice of input features
     first_features_dim = 128
 
-    in_features_dim = 1 # only points
+    # in_features_dim = 1 # only points
     # in_features_dim = 4 #1+color
-    # in_features_dim = 2  #1+Z
+    in_features_dim = 2  #1+Z
     # in_features_dim = 4  # 1+xyz
 
     # Can the network learn modulations
