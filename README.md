@@ -79,7 +79,7 @@ cp -r --parents scene0*/pose <ScanNet root>/scans_resize_160x120/
 python mvpnet/data/preprocess/preprocess.py -o <root of this repo>/ScanNet/cache_rgbd -s train
 python mvpnet/data/preprocess/preprocess.py -o <root of this repo>/ScanNet/cache_rgbd -s val
 ```
-if you also want to run mvpnet, you need to compute the overlap of each RGBD frame with the whole scene point cloud here, add `--rgbd` whenn run the script
+   if you also want to run mvpnet, you need to compute the overlap of each RGBD frame with the whole scene point cloud here, add `--rgbd` whenn run the script
 ```
 python mvpnet/data/preprocess/preprocess.py -o <root of this repo>/ScanNet/cache_rgbd -s train --rgbd
 python mvpnet/data/preprocess/preprocess.py -o <root of this repo>/ScanNet/cache_rgbd -s val --rgbd
@@ -111,7 +111,7 @@ Train the late fusion version:
 cd KPConv-PyTorch
 python train_ScanNet_sphere_late_fusion.py
 ```
-When you start a new training, it is saved in `KPConv-PyTorch/results` folder. A dated log folder will be created, containing many information including loss values, validation metrics, model checkpoints, etc. you can use `plot_convergence.py` to plot a logged training, please adapt the path and import dataset
+When you start a new training, it is saved in `KPConv-PyTorch/results` folder. A dated log folder will be created, containing many information including loss values, validation metrics, model checkpoints, etc. You can use `plot_convergence.py` to plot a logged training, please adapt the path and import dataset
 ```
 cd KPConv-PyTorch
 python plot_convergence.py.py
@@ -156,9 +156,12 @@ python mvpnet/test_mvpnet_3d.py --cfg configs/scannet/mvpnet_3d_unet_resnet34_pn
 | MV-KPConv  | 74.40 |
 | KPConv baseline | 52.58 |
 | MVPNet baseline | 71.21 |
+
 Note that results can slightly differ from training to training, the testing result of KPConv baseline & MV-KPConv may also fluctuate slightly because we use a voting mechanism.
 ## Pretrained model
 The pretrained model can be download here.
 pretrained 2D model should be saved in `outputs/scannet/unet_resnet34/`
-pretrained mvpnet should be saved in `outputs/scannet/mvpnet_3d_unet_resnet34_pn2ssg/`
-pretrained MV-KPConv should be saved in `KPConv-PyTorch/results`
+
+pretrained mvpnet should be saved in `outputs/scannet/mvpnet_3d_unet_resnet34_pn2ssg/`.
+
+pretrained MV-KPConv should be saved in `KPConv-PyTorch/results`.
