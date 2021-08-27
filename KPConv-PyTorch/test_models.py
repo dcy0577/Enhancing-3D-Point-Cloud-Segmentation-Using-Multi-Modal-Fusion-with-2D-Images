@@ -1,19 +1,10 @@
-#
-#
-#      0=================================0
-#      |    Kernel Point Convolutions    |
-#      0=================================0
-#
-#
-# ----------------------------------------------------------------------------------------------------------------------
-#
-#      Callable script to start a training on ModelNet40 dataset
-#
-# ----------------------------------------------------------------------------------------------------------------------
-#
-#      Hugues THOMAS - 06/03/2020
-#
-
+# Code base on
+# @article{thomas2019KPConv,
+#     Author = {Thomas, Hugues and Qi, Charles R. and Deschaud, Jean-Emmanuel and Marcotegui, Beatriz and Goulette, Fran{\c{c}}ois and Guibas, Leonidas J.},
+#     Title = {KPConv: Flexible and Deformable Convolution for Point Clouds},
+#     Journal = {Proceedings of the IEEE International Conference on Computer Vision},
+#     Year = {2019}
+# }
 
 # ----------------------------------------------------------------------------------------------------------------------
 #
