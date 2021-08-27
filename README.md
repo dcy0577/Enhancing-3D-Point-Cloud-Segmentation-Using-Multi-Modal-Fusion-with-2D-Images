@@ -165,3 +165,6 @@ pretrained 2D model should be saved in `outputs/scannet/unet_resnet34/`
 pretrained mvpnet should be saved in `outputs/scannet/mvpnet_3d_unet_resnet34_pn2ssg/`.
 
 pretrained MV-KPConv should be saved in `KPConv-PyTorch/results`.
+
+## Acknowledgements
+Note that the code is borrowed from [MVPNet](https://github.com/maxjaritz/mvpnet) and [KPConv](https://github.com/HuguesTHOMAS/KPConv-PyTorch)
