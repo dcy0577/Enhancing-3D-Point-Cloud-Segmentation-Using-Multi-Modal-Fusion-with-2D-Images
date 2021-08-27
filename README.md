@@ -159,7 +159,7 @@ python mvpnet/test_mvpnet_3d.py --cfg configs/scannet/mvpnet_3d_unet_resnet34_pn
 
 Note that results can slightly differ from training to training, the testing result of KPConv baseline & MV-KPConv may also fluctuate slightly because we use a voting mechanism.
 ## Pretrained model
-The pretrained model can be download here.
+The pretrained model can be download [here](https://syncandshare.lrz.de/getlink/fiNzkbd6y7YLLoqxAftGvA6K/).
 pretrained 2D model should be saved in `outputs/scannet/unet_resnet34/`
 
 pretrained mvpnet should be saved in `outputs/scannet/mvpnet_3d_unet_resnet34_pn2ssg/`.
