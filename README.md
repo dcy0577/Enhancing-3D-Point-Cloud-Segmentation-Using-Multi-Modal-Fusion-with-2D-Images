@@ -172,7 +172,7 @@ The data should be placed in the colmap folder with following data structure:
 ```
 -scene(pointcloud) name
    - depth_maps                   % .geometric.bin files from colmap
-   - parameter                    % images.bin, cameras.bin, points3D.bin from colmap; matrix_for_images.txt stores the correction matrix for photos in oder to align                                       the reconstruction point cloud with the laser scanned point cloud
+   - parameter                    % images.bin, cameras.bin, points3D.bin from colmap; matrix_for_images.txt stores the correction matrix for photos in oder to align the reconstruction point cloud with the laser scanned point cloud
    - images                       % color images
    - pointcloud                   % laser scanned point cloud
 ```
