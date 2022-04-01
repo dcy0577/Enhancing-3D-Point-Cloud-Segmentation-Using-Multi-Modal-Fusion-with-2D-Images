@@ -37,10 +37,10 @@ class Config:
     Class containing the parameters you want to modify for this dataset
     """
     ##################
-    # path
+    # ScanNet path
     ##################
 
-    # Dataset folder path
+    # ScanNet Dataset folder path
     dataset_path = '/home/dchangyu/MV-KPConv/ScanNet/'
     # meta_file path
     META_DIR = '/home/dchangyu/MV-KPConv/mvpnet/data/meta_files'
@@ -50,6 +50,22 @@ class Config:
     image_dir = '/home/dchangyu/MV-KPConv/ScanNet/scans_resize_160x120'
     # 2D model path
     path_2D = '/home/dchangyu/MV-KPConv/outputs/scannet/unet_resnet34/model_079000.pth'
+
+    ##################
+    # Colmap path
+    ##################
+
+    # Custom Colmap Dataset folder path
+    colmap_dataset_path = '/home/dchangyu/MV-KPConv/colmap'
+    # camera parameters
+    parameter_dir = 'parameter'
+    # includes depth images
+    depth_image_dir = 'depth_maps'
+    # includes color images
+    color_image_dir = 'images'
+    # point cloud path
+    point_cloud_path = 'pointcloud'
+
 
 
     ##################
