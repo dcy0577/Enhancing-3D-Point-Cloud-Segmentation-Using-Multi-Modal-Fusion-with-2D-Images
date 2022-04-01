@@ -166,5 +166,17 @@ pretrained mvpnet should be saved in `outputs/scannet/mvpnet_3d_unet_resnet34_pn
 
 pretrained MV-KPConv should be saved in `KPConv-PyTorch/results`.
 
+## Update 4/2022: Add dataloader for custom dataset (Colmap)
+We used a laser scanner to acquire point clouds of interior rooms and a camera to take multi-view color pictures of the rooms. We used colmap to perform 3D reconstruction using these images to predict the depth map and camera parameters corresponding to the images. Using this 2D-3D information we constructed a custom dataset.
+The data should be placed in the colmap folder with following data structure:
+```
+-scene(pointcloud) name
+   - depth_maps                   % .geometric.bin files from colmap
+   - parameter                    % images.bin, cameras.bin, points3D.bin from colmap; matrix_for_images.txt stores the correction matrix for photos in oder to align                                       the reconstruction point cloud with the laser scanned point cloud
+   - images                       % color images
+   - pointcloud                   % laser scanned point cloud
+```
+In addition, using `KPConv-PyTorch/test_colmap_baseline_models.py` you can test the performance of KPConv on this custom datasets. Using `KPConv-PyTorch/test_models_colmap.py` you can test the performance of MV-KPConv on this custom datasets. Note: Here we used the best performing MV-KPConv and KPConv models trained on scannet for our experiments.
+
 ## Acknowledgements
 Note that the code is borrowed from [MVPNet](https://github.com/maxjaritz/mvpnet) and [KPConv](https://github.com/HuguesTHOMAS/KPConv-PyTorch)
