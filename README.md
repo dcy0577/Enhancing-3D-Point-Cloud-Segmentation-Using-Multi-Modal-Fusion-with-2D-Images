@@ -1,5 +1,8 @@
 # Enhancing-3D-Point-Cloud-Segmentation-Using-Multi-Modal-Fusion-with-2D-Images
 
+This is implementation for the [paper](https://mediatum.ub.tum.de/doc/1691326/1691326.pdf):
+> Du, C., Torres, V., Pan, Y., & Borrmann, A. (2022). MV-KPConv: Multi-view KPConv For Enhanced 3D Point Cloud Semantic Segmentation Using Multi-Modal Fusion With 2D Image. In European Conference on Product and Process Modeling 2022.
+
 ## Installation
 All experiments are run on Ubuntu 16.04 with a 5GB Quadro P2000 GPU and 32 GB RAM. 
 - CUDA 10.0
@@ -177,6 +180,18 @@ The data should be placed in the colmap folder with following data structure:
    - pointcloud                   % laser scanned point cloud
 ```
 In addition, using `KPConv-PyTorch/test_colmap_baseline_models.py` you can test the performance of KPConv on this custom datasets. Using `KPConv-PyTorch/test_models_colmap.py` you can test the performance of MV-KPConv on this custom datasets. Note: Here we used the best performing MV-KPConv and KPConv models trained on scannet for our experiments.
+
+## Citation
+```
+@inproceedings{Du:2022:MV-KPConv,
+	author = {Du, C. and Vega Torres, M.A. and Pan, Y. and Borrmann, A.},
+	title = {MV-KPConv: Multi-view KPConv For Enhanced 3D Point Cloud Semantic Segmentation Using Multi-Modal Fusion With 2D Image},
+	booktitle = {European Conference on Product and Process Modeling 2022},
+	year = {2022},
+	month = {Sep},
+	url = {https://mediatum.ub.tum.de/doc/1691326/1691326.pdf},
+}
+```
 
 ## Acknowledgements
 Note that the code is borrowed from [MVPNet](https://github.com/maxjaritz/mvpnet) and [KPConv](https://github.com/HuguesTHOMAS/KPConv-PyTorch)
